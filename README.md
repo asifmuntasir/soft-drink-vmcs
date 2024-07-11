@@ -3,7 +3,10 @@
 
 
 # ScreenShots
-![](pic.png)
+![](ss-1.jpeg)
+![](ss-2.jpeg)
+![](ss-3.jpeg)
+![](ss-4.jpeg)
 
 ## Built With
 - Vite App
