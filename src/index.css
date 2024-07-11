@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+body {
+  background-color: #D3D3D3;
+}
+
+
+
+/****************************** Customer Panel ******************************/
+.main-container {
+  margin: 50px auto;
+  max-width: 500px;
+  height: 100%;
+  border: 2px solid #BDC3C7;
+}
+
+.vending-machine {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vending-machine h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stock-status {
+  color: red;
+}
+
+.input-group-text,
+.btn {
+  width: 100%;
+}
+
+.btn,
+.form-control,
+.form-control-lg {
+  margin-bottom: 10px;
+}
+
+
+/****************************** Maintaner Panel ******************************/
+
+.control-panel {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn,
+.form-control,
+.form-control-lg {
+  margin-bottom: 10px;
+}
+
+.btn-group .btn {
+  width: 25%;
+}
+
+
+/****************************** Maintaner Panel ******************************/
+
+
+.control-panel {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.control-panel h2 {
+  text-align: center;
+}
+
+/****************************** Simulator Panel ******************************/
+
+.control-panel {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #e3f2fd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-container .btn {
+  width: 30%;
+}
+
+.btn-container .label {
+  width: 60%;
+  text-align: left;
+  font-size: 1.25rem;
+}
