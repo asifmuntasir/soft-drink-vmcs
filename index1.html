@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to CSV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-4">Vending Machine Control Panel</h2>
+        <form id="formData">
+            <!-- Form fields as shown in the previous HTML example -->
+        </form>
+        <input type="file" id="csvFileInput" accept=".csv" class="form-control mt-3">
+        <button id="loadCSV" class="btn btn-primary mt-3">Load Settings from CSV</button>
+    </div>
+    <script>
+        document.getElementById('loadCSV').addEventListener('click', function () {
+            const input = document.getElementById('csvFileInput');
+            if (input.files.length === 0) {
+                alert('Please select a CSV file first');
+                return;
+            }
+
+            const file = input.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const text = e.target.result;
+                const data = text.split('\r\n').map(row => row.split(','));
+
+                if (data.length < 2) {
+                    alert('Invalid CSV file');
+                    return;
+                }
+
+                const headers = data[0];
+                const values = data[1];
+
+                headers.forEach((header, index) => {
+                    const inputElement = document.getElementById(header);
+                    if (inputElement) {
+                        if (inputElement.type === 'radio') {
+                            document.querySelector(`#${header}[value="${values[index]}"]`).checked = true;
+                        } else {
+                            inputElement.value = values[index];
+                        }
+                    }
+                });
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+
+</html>
