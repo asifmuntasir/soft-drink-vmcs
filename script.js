@@ -20,17 +20,40 @@ document.getElementById('activateCustomer').addEventListener("click", function (
 
 const pressButton = document.getElementById('uploadConfirm').addEventListener("click", executeData);
 
+let items;
 function executeData() {
     Papa.parse(document.getElementById('uploadFile').files[0], {
         download: true,
         header: true,
         skipEmptyLines: true,
         complete: function (res) {
-            let items = res.data[0];
-            console.log(items.coins10);
+            items = res.data[0];
+            // console.log(items.coins10);
+            // console.log(items.brand1);
+            if (items.brand1 > 0) {
+                document.getElementById("brand1Stock").innerHTML = "In Stock";
+            }
+            if (items.brand2 > 0) {
+                document.getElementById("brand2Stock").innerHTML = "In Stock";
+            }
+            if (items.brand3 > 0) {
+                document.getElementById("brand3Stock").innerHTML = "In Stock";
+            }
+            if (items.brand4 > 0) {
+                document.getElementById("brand4Stock").innerHTML = "In Stock";
+            }
+            if (items.brand5 > 0) {
+                document.getElementById("brand5Stock").innerHTML = "In Stock";
+            }
         }
     })
 }
+
+// console.log(items.brand1);
+
+// if (items.brand1 > 0) {
+//     document.getElementById("brand1Stock").innerHTML = "In Stock";
+// }
 
 
 
