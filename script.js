@@ -21,6 +21,7 @@ document.getElementById('activateCustomer').addEventListener("click", function (
 const pressButton = document.getElementById('uploadConfirm').addEventListener("click", executeData);
 
 let items;
+
 function executeData() {
     Papa.parse(document.getElementById('uploadFile').files[0], {
         download: true,
@@ -51,6 +52,23 @@ function executeData() {
     // console.log(insertCoin);
 }
 
+document.getElementById("checkButton").addEventListener(
+    'click', function () {
+        const val = document.getElementById("insertCoin").value;
+        // console.log(val)
+        if (val !== '10C' && val !== '20C' && val !== '50C' && val !== '1RM') {
+            document.getElementById("valid").style.display = "none";
+            document.getElementById("invalid").style.display = "block";
+            document.getElementById("checkButton").style.display = "none";
+        } else {
+            document.getElementById("valid").style.display = "block";
+            document.getElementById("invalid").style.display = "none";
+            document.getElementById("checkButton").style.display = "none";
+        }
+    }
+)
+
+
 // function getValue() {
 //     const insertCoin = document.getElementById("inserCoin");
 //     insertCoin.addEventListener("input", () => {
@@ -59,11 +77,11 @@ function executeData() {
 //     })
 // }
 
-const insertCoin = document.getElementById("insertCoin");
-insertCoin.addEventListener("input", () => {
-    const val = insertCoin.value;
-    console.log(val);
-})
+// const insertCoin = document.getElementById("insertCoin");
+// insertCoin.addEventListener("input", () => {
+//     const val = insertCoin.value;
+//     console.log(val);
+// });
 
 // console.log(items.brand1);
 

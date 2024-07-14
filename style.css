@@ -113,3 +113,11 @@
 #simulationEnd {
     display: none;
 }
+
+#invalid {
+    display: none;
+}
+
+#valid {
+    display: none;
+}
