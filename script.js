@@ -46,8 +46,24 @@ function executeData() {
                 document.getElementById("brand5Stock").innerHTML = "In Stock";
             }
         }
-    })
+    });
+    // const insertCoin = document.getElementById("inserCoin").value;
+    // console.log(insertCoin);
 }
+
+// function getValue() {
+//     const insertCoin = document.getElementById("inserCoin");
+//     insertCoin.addEventListener("input", () => {
+//         const val = insertCoin.value;
+//         console.log(insertCoin);
+//     })
+// }
+
+const insertCoin = document.getElementById("insertCoin");
+insertCoin.addEventListener("input", () => {
+    const val = insertCoin.value;
+    console.log(val);
+})
 
 // console.log(items.brand1);
 
