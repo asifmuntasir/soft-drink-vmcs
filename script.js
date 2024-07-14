@@ -18,6 +18,20 @@ document.getElementById('activateCustomer').addEventListener("click", function (
     document.getElementById("simulationEnd").style.display = "none";
 });
 
+const pressButton = document.getElementById('uploadConfirm').addEventListener("click", executeData);
+
+function executeData() {
+    Papa.parse(document.getElementById('uploadFile').files[0], {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function (res) {
+            let items = res.data[0];
+            console.log(items.coins10);
+        }
+    })
+}
+
 
 
 
