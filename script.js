@@ -21,6 +21,8 @@ document.getElementById('activateCustomer').addEventListener("click", function (
 const pressButton = document.getElementById('uploadConfirm').addEventListener("click", executeData);
 
 let items;
+let val;
+let inputVal = [];
 
 function executeData() {
     Papa.parse(document.getElementById('uploadFile').files[0], {
@@ -52,21 +54,28 @@ function executeData() {
     // console.log(insertCoin);
 }
 
-document.getElementById("checkButton").addEventListener(
-    'click', function () {
-        const val = document.getElementById("insertCoin").value;
-        // console.log(val)
-        if (val !== '10C' && val !== '20C' && val !== '50C' && val !== '1RM') {
-            document.getElementById("valid").style.display = "none";
-            document.getElementById("invalid").style.display = "block";
-            document.getElementById("checkButton").style.display = "none";
-        } else {
-            document.getElementById("valid").style.display = "block";
-            document.getElementById("invalid").style.display = "none";
-            document.getElementById("checkButton").style.display = "none";
-        }
+
+
+
+document.getElementById("insertCoin").addEventListener("input", function () {
+    val = this.value;
+    const number = parseFloat(val);
+    if (!isNaN(number)) {
+        inputVal.push(number);
+        val = '';  // Clear the input field
     }
-)
+
+    if (val !== '10' && val !== '20' && val !== '50' && val !== '1') {
+        document.getElementById("valid").style.display = "none";
+        document.getElementById("invalid").style.display = "block";
+    } else {
+        document.getElementById("valid").style.display = "block";
+        document.getElementById("invalid").style.display = "none";
+    }
+    // document.getElementById("total-money").innerText = inputValue;
+});
+
+
 
 
 // function getValue() {

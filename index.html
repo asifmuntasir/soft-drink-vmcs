@@ -75,7 +75,6 @@
                 </div>
                 <div class="col-6">
                     <label class="form-label invisible">Label</label>
-                    <button class="btn btn-secondary" id="checkButton">CHECK COINS</button>
                     <button class="btn btn-danger" id="invalid">COINS NOT VALID</button>
                     <button class="btn btn-success" id="valid">COINS VALID</button>
 
@@ -83,215 +82,216 @@
             </div>
             <div class="mb-3">
                 <label for="total-money" class="form-label">TOTAL MONEY INSERTED</label>
-                <input type="text" id="total-money" class="form-control form-control-lg">
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h4>SELECT DRINKS BRAND BELOW</h4>
+                <div type="text" id="total-money" class="form-control form-control-lg">
                 </div>
-                <div class="col-6">
-                    <p>BRAND 1</p>
-                </div>
-                <div class="col-2">
-                    <p>70c</p>
-                </div>
-                <div class="col-2 stock-status">
-                    <p id="brand1Stock">NOT IN STOCK</p>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-primary" id="brand1">SELECT</button>
-                </div>
-                <div class="col-6">
-                    <p>BRAND 2</p>
-                </div>
-                <div class="col-2">
-                    <p>70c</p>
-                </div>
-                <div class="col-2 stock-status">
-                    <p id="brand2Stock">NOT IN STOCK</p>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-primary" id="brand2">SELECT</button>
-                </div>
-                <div class="col-6">
-                    <p>BRAND 3</p>
-                </div>
-                <div class="col-2">
-                    <p>70c</p>
-                </div>
-                <div class="col-2 stock-status">
-                    <p id="brand3Stock">NOT IN STOCK</p>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-primary" id="brand3">SELECT</button>
-                </div>
-                <div class="col-6">
-                    <p>BRAND 4</p>
-                </div>
-                <div class="col-2">
-                    <p>60c</p>
-                </div>
-                <div class="col-2 stock-status">
-                    <p id="brand4Stock">NOT IN STOCK</p>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-primary" id="brand4">SELECT</button>
-                </div>
-                <div class="col-6">
-                    <p>BRAND 5</p>
-                </div>
-                <div class="col-2">
-                    <p>60c</p>
-                </div>
-                <div class="col-2 stock-status">
-                    <p id="brand5Stock">NOT IN STOCK</p>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-primary" id="brand5">SELECT</button>
-                </div>
-            </div>
-            <div class="text-center my-3">
-                <p>NO CHANGE AVAILABLE</p>
-            </div>
-            <div class="row mb-3">
-                <div class="col-6">
-                    <button class="btn btn-warning">RETURN CASH & TERMINATE TRANSACTION</button>
-                </div>
-                <div class="col-6">
-                    <button class="btn btn-info">COLLECT CHANGE</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <button class="btn btn-success">COLLECT CAN HERE</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Customer Panel End -->
-
-        <!-- Maintainer Panel Start -->
-
-        <div class="control-panel" id="maintaner">
-            <h2>VIMTO SOFT DRINKS DISPENSER</h2>
-            <h4 class="text-center">MAINTAINER CONTROL PANEL</h4>
-            <div class="mb-3">
-                <label for="password" class="form-label">TYPE PASSWORD HERE</label>
-                <input type="password" id="password" class="form-control form-control-lg">
-            </div>
-            <div class="row mb-3">
-                <div class="col-6">
-                    <button class="btn btn-success">PASSWORD VALID</button>
-                </div>
-                <div class="col-6">
-                    <button class="btn btn-danger">PASSWORD INVALID</button>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">PRESS BELOW TO DETERMINE NUMBER OF COINS IN SELECTED DENOMINATION</label>
-                <div class="btn-group" role="group">
-                    <button class="btn btn-outline-secondary">10c</button>
-                    <button class="btn btn-outline-secondary">20c</button>
-                    <button class="btn btn-outline-secondary">50c</button>
-                    <button class="btn btn-outline-secondary">RM1</button>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="total-coins" class="form-label">TOTAL NUMBER OF COINS IN SELECTED DENOMINATION</label>
-                <input type="text" id="total-coins" class="form-control form-control-lg">
-            </div>
-            <div class="mb-3">
-                <label for="new-price" class="form-label">TYPE NEW DRINKS CAN PRICE HERE</label>
-                <input type="text" id="new-price" class="form-control form-control-lg">
-            </div>
-            <div class="row mb-3">
-                <div class="col-6">
-                    <button class="btn btn-primary">PRESS HERE FOR TOTAL CASH HELD BY MACHINE</button>
-                </div>
-                <div class="col-6">
-                    <input type="text" id="total-cash" class="form-control form-control-lg" placeholder="TOTAL CASH">
-                </div>
-            </div>
-            <div class="mb-3">
-                <button class="btn btn-warning w-100">PRESS HERE TO COLLECT ALL CASH</button>
-            </div>
-            <div class="mb-3">
-                <label for="collect-cash" class="form-label">COLLECT ALL CASH HERE</label>
-                <input type="text" id="collect-cash" class="form-control form-control-lg">
-            </div>
-            <div>
-                <button class="btn btn-success w-100">PRESS HERE WHEN FINISHED</button>
-            </div>
-        </div>
-
-        <!-- Maintainer Panel Start -->
-
-        <!-- Machinery Panel Start -->
-
-        <div class="control-panel" id="machinery">
-            <h2>Machinery Simulation Control Panel</h2>
-            <form id="formData">
-                <div class="mb-3">
-                    <label for="brand1" class="form-label">Number of Drinks Cans of Brand 1</label>
-                    <input type="number" class="form-control" id="brand1" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="brand2" class="form-label">Number of Drinks Cans of Brand 2</label>
-                    <input type="number" class="form-control" id="brand2" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="brand3" class="form-label">Number of Drinks Cans of Brand 3</label>
-                    <input type="number" class="form-control" id="brand3" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="brand4" class="form-label">Number of Drinks Cans of Brand 4</label>
-                    <input type="number" class="form-control" id="brand4" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="brand5" class="form-label">Number of Drinks Cans of Brand 5</label>
-                    <input type="number" class="form-control" id="brand5" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="coins10" class="form-label">Number of 10¢ Coins</label>
-                    <input type="number" class="form-control" id="coins10" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="coins20" class="form-label">Number of 20¢ Coins</label>
-                    <input type="number" class="form-control" id="coins20" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="coins50" class="form-label">Number of 50¢ Coins</label>
-                    <input type="number" class="form-control" id="coins50" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="coins1" class="form-label">Number of RM1 Coins</label>
-                    <input type="text" class="form-control" id="note1" placeholder="Enter new value">
-                </div>
-                <div class="mb-3">
-                    <label for="machineLock" class="form-label">Status of Vending Machine Door Lock</label>
-                    <div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="machineLock" id="locked" value="locked"
-                                checked>
-                            <label class="form-check-label" for="locked">Locked</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="machineLock" id="unlocked"
-                                value="unlocked">
-                            <label class="form-check-label" for="unlocked">Unlocked</label>
-                        </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4>SELECT DRINKS BRAND BELOW</h4>
+                    </div>
+                    <div class="col-6">
+                        <p>BRAND 1</p>
+                    </div>
+                    <div class="col-2">
+                        <p>70c</p>
+                    </div>
+                    <div class="col-2 stock-status">
+                        <p id="brand1Stock">NOT IN STOCK</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-primary" id="brand1">SELECT</button>
+                    </div>
+                    <div class="col-6">
+                        <p>BRAND 2</p>
+                    </div>
+                    <div class="col-2">
+                        <p>70c</p>
+                    </div>
+                    <div class="col-2 stock-status">
+                        <p id="brand2Stock">NOT IN STOCK</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-primary" id="brand2">SELECT</button>
+                    </div>
+                    <div class="col-6">
+                        <p>BRAND 3</p>
+                    </div>
+                    <div class="col-2">
+                        <p>70c</p>
+                    </div>
+                    <div class="col-2 stock-status">
+                        <p id="brand3Stock">NOT IN STOCK</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-primary" id="brand3">SELECT</button>
+                    </div>
+                    <div class="col-6">
+                        <p>BRAND 4</p>
+                    </div>
+                    <div class="col-2">
+                        <p>60c</p>
+                    </div>
+                    <div class="col-2 stock-status">
+                        <p id="brand4Stock">NOT IN STOCK</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-primary" id="brand4">SELECT</button>
+                    </div>
+                    <div class="col-6">
+                        <p>BRAND 5</p>
+                    </div>
+                    <div class="col-2">
+                        <p>60c</p>
+                    </div>
+                    <div class="col-2 stock-status">
+                        <p id="brand5Stock">NOT IN STOCK</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-primary" id="brand5">SELECT</button>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Save Settings</button>
-            </form>
+                <div class="text-center my-3">
+                    <p>NO CHANGE AVAILABLE</p>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <button class="btn btn-warning">RETURN CASH & TERMINATE TRANSACTION</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-info">COLLECT CHANGE</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-success">COLLECT CAN HERE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Panel End -->
+
+            <!-- Maintainer Panel Start -->
+
+            <div class="control-panel" id="maintaner">
+                <h2>VIMTO SOFT DRINKS DISPENSER</h2>
+                <h4 class="text-center">MAINTAINER CONTROL PANEL</h4>
+                <div class="mb-3">
+                    <label for="password" class="form-label">TYPE PASSWORD HERE</label>
+                    <input type="password" id="password" class="form-control form-control-lg">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <button class="btn btn-success">PASSWORD VALID</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-danger">PASSWORD INVALID</button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PRESS BELOW TO DETERMINE NUMBER OF COINS IN SELECTED DENOMINATION</label>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-outline-secondary">10c</button>
+                        <button class="btn btn-outline-secondary">20c</button>
+                        <button class="btn btn-outline-secondary">50c</button>
+                        <button class="btn btn-outline-secondary">RM1</button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="total-coins" class="form-label">TOTAL NUMBER OF COINS IN SELECTED DENOMINATION</label>
+                    <input type="text" id="total-coins" class="form-control form-control-lg">
+                </div>
+                <div class="mb-3">
+                    <label for="new-price" class="form-label">TYPE NEW DRINKS CAN PRICE HERE</label>
+                    <input type="text" id="new-price" class="form-control form-control-lg">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <button class="btn btn-primary">PRESS HERE FOR TOTAL CASH HELD BY MACHINE</button>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="total-cash" class="form-control form-control-lg"
+                            placeholder="TOTAL CASH">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-warning w-100">PRESS HERE TO COLLECT ALL CASH</button>
+                </div>
+                <div class="mb-3">
+                    <label for="collect-cash" class="form-label">COLLECT ALL CASH HERE</label>
+                    <input type="text" id="collect-cash" class="form-control form-control-lg">
+                </div>
+                <div>
+                    <button class="btn btn-success w-100">PRESS HERE WHEN FINISHED</button>
+                </div>
+            </div>
+
+            <!-- Maintainer Panel Start -->
+
+            <!-- Machinery Panel Start -->
+
+            <div class="control-panel" id="machinery">
+                <h2>Machinery Simulation Control Panel</h2>
+                <form id="formData">
+                    <div class="mb-3">
+                        <label for="brand1" class="form-label">Number of Drinks Cans of Brand 1</label>
+                        <input type="number" class="form-control" id="brand1" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand2" class="form-label">Number of Drinks Cans of Brand 2</label>
+                        <input type="number" class="form-control" id="brand2" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand3" class="form-label">Number of Drinks Cans of Brand 3</label>
+                        <input type="number" class="form-control" id="brand3" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand4" class="form-label">Number of Drinks Cans of Brand 4</label>
+                        <input type="number" class="form-control" id="brand4" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand5" class="form-label">Number of Drinks Cans of Brand 5</label>
+                        <input type="number" class="form-control" id="brand5" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="coins10" class="form-label">Number of 10¢ Coins</label>
+                        <input type="number" class="form-control" id="coins10" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="coins20" class="form-label">Number of 20¢ Coins</label>
+                        <input type="number" class="form-control" id="coins20" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="coins50" class="form-label">Number of 50¢ Coins</label>
+                        <input type="number" class="form-control" id="coins50" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="coins1" class="form-label">Number of RM1 Coins</label>
+                        <input type="text" class="form-control" id="note1" placeholder="Enter new value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="machineLock" class="form-label">Status of Vending Machine Door Lock</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="machineLock" id="locked"
+                                    value="locked" checked>
+                                <label class="form-check-label" for="locked">Locked</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="machineLock" id="unlocked"
+                                    value="unlocked">
+                                <label class="form-check-label" for="unlocked">Unlocked</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Settings</button>
+                </form>
+            </div>
+
+            <!-- Machinery Panel Start -->
+
+            <!-- Simulation End -->
         </div>
-
-        <!-- Machinery Panel Start -->
-
-        <!-- Simulation End -->
-    </div>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
