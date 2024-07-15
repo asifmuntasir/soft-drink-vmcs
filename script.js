@@ -26,6 +26,8 @@ let coinArray = [];
 let calc;
 let validCoins = [1, 0.10, 0.20, 0.50];
 
+let sum;
+
 function executeData() {
     Papa.parse(document.getElementById('uploadFile').files[0], {
         download: true,
@@ -52,17 +54,17 @@ function executeData() {
             }
         }
     });
-    // const insertCoin = document.getElementById("inserCoin").value;
-    // console.log(insertCoin);
+
+
 }
 
 
-
+// insert Coin
 
 document.getElementById("insertCoin").addEventListener("input", function () {
     val = this.value;
-    const number = parseFloat(val)
-    let sum;
+    const number = parseFloat(val);
+
 
     if (validCoins.includes(number)) {
         document.getElementById("coinMSG").innerText = "COINS VALID";
@@ -72,12 +74,73 @@ document.getElementById("insertCoin").addEventListener("input", function () {
         sum = coinArray.reduce((total, num) => total + num, 0);
         // Display the total sum
 
-        document.getElementById("total-money").innerText = parseFloat(sum).toFixed(2);
+        document.getElementById("total-money").innerText = sum.toFixed(2);
 
     } else {
         document.getElementById("coinMSG").innerText = "COINS NOT VALID";
     }
 });
+
+// Select product
+
+const brand1 = document.getElementById("brand1");
+const brand2 = document.getElementById("brand2");
+const brand3 = document.getElementById("brand3");
+const brand4 = document.getElementById("brand4");
+const brand5 = document.getElementById("brand5");
+
+brand1.addEventListener('click', () => {
+    if (sum >= 0.70) {
+        calculatePrice(sum, 0.70);
+    } else {
+        alert("Not Enough Coins");
+    }
+})
+
+brand2.addEventListener('click', () => {
+    if (sum >= 0.70) {
+        calculatePrice(sum, 0.70);
+    } else {
+        alert("Not Enough Coins");
+    }
+})
+
+brand3.addEventListener('click', () => {
+    if (sum >= 0.70) {
+        calculatePrice(sum, 0.70);
+    } else {
+        alert("Not Enough Coins");
+    }
+})
+
+brand4.addEventListener('click', () => {
+    if (sum >= 0.70) {
+        calculatePrice(sum, 0.60);
+    } else {
+        alert("Not Enough Coins");
+    }
+})
+
+brand5.addEventListener('click', () => {
+    if (sum >= 0.70) {
+        calculatePrice(sum, 0.60);
+    } else {
+        alert("Not Enough Coins");
+    }
+})
+
+
+function calculatePrice(s, v) {
+    const retunrValue = parseFloat(s - v).toFixed(2);
+    document.getElementById('collectChange').innerHTML = retunrValue;
+
+
+}
+
+document.getElementById("collectCAN").addEventListener("click", () => {
+    document.getElementById("CAN").style.display = "block";
+})
+
 
 
 
