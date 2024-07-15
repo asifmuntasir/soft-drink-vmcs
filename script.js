@@ -22,7 +22,9 @@ const pressButton = document.getElementById('uploadConfirm').addEventListener("c
 
 let items;
 let val;
-let inputVal = [];
+let coinArray = [];
+let calc;
+let validCoins = [1, 0.10, 0.20, 0.50];
 
 function executeData() {
     Papa.parse(document.getElementById('uploadFile').files[0], {
@@ -59,44 +61,23 @@ function executeData() {
 
 document.getElementById("insertCoin").addEventListener("input", function () {
     val = this.value;
-    const number = parseFloat(val);
-    if (!isNaN(number)) {
-        inputVal.push(number);
-        val = '';  // Clear the input field
-    }
+    const number = parseFloat(val)
+    let sum;
 
-    if (val !== '10' && val !== '20' && val !== '50' && val !== '1') {
-        document.getElementById("valid").style.display = "none";
-        document.getElementById("invalid").style.display = "block";
+    if (validCoins.includes(number)) {
+        document.getElementById("coinMSG").innerText = "COINS VALID";
+
+        // Add the valid coin to the array and calculate the sum
+        coinArray.push(number);
+        sum = coinArray.reduce((total, num) => total + num, 0);
+        // Display the total sum
+
+        document.getElementById("total-money").innerText = parseFloat(sum).toFixed(2);
+
     } else {
-        document.getElementById("valid").style.display = "block";
-        document.getElementById("invalid").style.display = "none";
+        document.getElementById("coinMSG").innerText = "COINS NOT VALID";
     }
-    // document.getElementById("total-money").innerText = inputValue;
 });
-
-
-
-
-// function getValue() {
-//     const insertCoin = document.getElementById("inserCoin");
-//     insertCoin.addEventListener("input", () => {
-//         const val = insertCoin.value;
-//         console.log(insertCoin);
-//     })
-// }
-
-// const insertCoin = document.getElementById("insertCoin");
-// insertCoin.addEventListener("input", () => {
-//     const val = insertCoin.value;
-//     console.log(val);
-// });
-
-// console.log(items.brand1);
-
-// if (items.brand1 > 0) {
-//     document.getElementById("brand1Stock").innerHTML = "In Stock";
-// }
 
 
 
